@@ -1,9 +1,21 @@
 # Frequently asked DSA Topics
 
-----
+<details>
+  <summary>Dynamic Programming</summary>
+</details>
 
-- Dynamic Programming
-- Backtracing
-- Sliding Window
-- Graph
-- Tree
+<details>
+  <summary>Backtracing</summary>
+</details>
+
+<details>
+  <summary>Sliding Window</summary>
+</details>
+
+<details>
+  <summary>Graph</summary>
+</details>
+
+<details>
+  <summary>Tree</summary>
+</details>

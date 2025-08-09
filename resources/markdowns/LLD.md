@@ -1,15 +1,23 @@
 # LLD Topics
 
-----
+<details>
+  <summary>Design Restful APIs</summary>
+</details>
 
-- Design Restful APIs
-- Design Tables - SQL/NoSQL
-- SOLID Principles
-- Design Patterns
-- Best coding practices
+<details>
+  <summary>Design Tables - SQL/NoSQL</summary>
+</details>
 
-<!-- <details>
-  <summary>Click to read more</summary>
+<details>
+  <summary>SOLID Principles</summary>
+</details>
 
-  Content will go here
-</details> -->
+<details>
+  <summary>Design Patterns</summary>
+  
+  [Youtube playlist](https://www.youtube.com/playlist?list=PLrhzvIcii6GNjpARdnO4ueTUAVR9eMBpc)
+</details>
+
+<details>
+  <summary>Best coding practices</summary>
+</details>
