@@ -1,5 +1,7 @@
 # Frequently asked DSA Topics
 
+- [Bosscoder - Blind 75](/resources/pdfs/bosscoder_blind-75.pdf)
+
 <details>
   <summary>Dynamic Programming</summary>
 </details>
