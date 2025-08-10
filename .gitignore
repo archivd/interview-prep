@@ -1,0 +1,41 @@
+# VS Code
+.vscode/
+
+# JetBrains editors (IntelliJ IDEA, PyCharm, etc.)
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Atom editor
+.atom/
+*.atom/
+
+# Eclipse
+.project
+.classpath
+.settings/
+.metadata/
+bin/
+tmp/
+
+# Emacs and Vim
+*~
+*.swp
+*.swo
+*.swn
+.#*
+
+# Mac Finder tags and system files
+.DS_Store
+
+# Windows metadata
+Thumbs.db
+Desktop.ini
+
+# Others (common backups/caches)
+*.bak
+*.tmp
+*.log
