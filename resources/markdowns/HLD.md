@@ -1,6 +1,14 @@
 # HLD Topics
 
-[Piyush Garg - System Design Playlist](https://youtube.com/playlist?list=PLinedj3B30sBlBWRox2V2tg9QJ2zr4M3o&si=jqGBQBLOOl6UX4hs)
+- [Striver's System Design Roadmap](https://takeuforward.org/system-design/complete-system-design-roadmap-with-videos-for-sdes)
+
+- [Piyush Garg - System Design Playlist](https://youtube.com/playlist?list=PLinedj3B30sBlBWRox2V2tg9QJ2zr4M3o&si=jqGBQBLOOl6UX4hs)
+
+- [Gaurav Sen - Resources](https://interviewready.io/resources)
+
+----
+
+### Topics
 
 <details>
   <summary>Scalability and Load Balancing</summary>
