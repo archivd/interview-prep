@@ -7,7 +7,6 @@
 
   <details>
     <summary>What is RAG?</summary>
-
     <p>
     Retrieval-Augmented Generation (RAG) is a hybrid architecture that combines retrieval-based search with large language models (LLMs) to enhance factuality, scalability, and adaptability. Traditional LLMs rely solely on their training data, making them prone to factual errors or outdated knowledge. In RAG, when a user submits a query, a retriever module (such as a dense vector search against a vector database) identifies the most relevant documents or context snippets from an external knowledge store or corpus. These retrieved pieces are fed, along with the user’s query, into a generative model (such as GPT or Llama). The generation process then conditions on this fresh information, allowing the LLM to produce answers that are not only contextual but also grounded in the latest or domain-specific data.
 
@@ -17,7 +16,6 @@
 
   <details>
     <summary>How do you evaluate GenAI outputs?</summary>
-
     <p>
     Evaluating GenAI outputs involves multifaceted strategies, blending automatic and human approaches to cover the complexity of generative responses. Automated metrics, such as BLEU, ROUGE, and METEOR, provide quantitative assessments of overlap with reference texts, but are limited in capturing contextual relevance, creativity, or logical reasoning. More sophisticated metrics—like BERTScore or COMET—leverage transformer models for semantic similarity evaluation. However, generative tasks often require qualitative judgments, leading to the use of human evaluation along dimensions such as accuracy, relevance, coherence, fluency, informativeness, user satisfaction, and avoidance of harmful content.
 
@@ -29,7 +27,6 @@
 
   <details>
     <summary>A chatbot shows gender bias, e.g., HR jobs to women and Engineering jobs to men. How do you detect and fix this?</summary>
-
     <p>
     Detecting and remediating gender bias in chatbots requires a combination of systematic evaluation and targeted reengineering. Detection starts with input audits: prompt the bot with gender-neutral scenarios ("This person is a software engineer. What pronoun do you use?") and analyze if the bot exhibits stereotypes (e.g., “he” for engineers, “she” for HR roles). Metrics like WEAT (Word Embedding Association Test), bias ladders, and disparity scores quantify model bias across occupations, pronouns, and sentiment.
 
@@ -41,7 +38,6 @@
 
   <details>
     <summary>What are LangChain, LangGrpah, Llama index, etc.?</summary>
-
     <p>
     LangChain is an open-source framework for creating powerful LLM-based applications by building composable chains of operations—prompting, tool use, memory, and agent orchestration. It simplifies tasks like chaining multiple LLM calls, working with APIs, and integrating tools such as search engines or databases. LangChain supports modular construction, making it easy to test and swap components or expand workflows for advanced use cases.
 
@@ -55,7 +51,6 @@
 
   <details>
     <summary>Classical NLP and related topics</summary>
-
     <p>
     Classical NLP comprises pre-deep learning approaches for handling human language, primarily using symbolic, rule-based, and statistical models. Key topics include tokenization (breaking text into words/subwords), stemming/lemmatization (reducing words to base forms), part-of-speech tagging, named entity recognition, syntactic parsing, and dependency analysis. Vector space models like TF-IDF allow for basic document retrieval and topic extraction, while approaches such as n-gram language models, Hidden Markov Models (HMM), and Conditional Random Fields (CRF) power sequence modeling and information extraction.
 
@@ -67,7 +62,6 @@
 
   <details>
     <summary>How to handle system failures?</summary>
-
     <p>
     Managing system failures in GenAI solutions involves architectural resilience, rigorous monitoring, and robust recovery protocols. Start by designing for fault tolerance: use health checks, rate limiting, and circuit breakers to isolate failures so they don't cascade. For multi-component systems (retriever, generator, vector DB), deploy service meshes or orchestrators (like Kubernetes) for automated restarts, scaling, and failover.
 
@@ -81,7 +75,6 @@
 
   <details>
     <summary>Difference between fine-tuning, prompt-engineering and RAG</summary>
-
     <p>
     Fine-tuning, prompt engineering, and RAG are key methods for adapting LLMs to specific needs, each with unique strengths and limitations. Fine-tuning retrains an LLM on domain or task-specific data, updating its weights so it “learns” new patterns. This achieves deep specialization and higher accuracy on narrow tasks, but requires significant data and compute, and risks overfitting or catastrophic forgetting.
 
@@ -95,7 +88,6 @@
 
   <details>
     <summary>Context window management</summary>
-
     <p>
     Managing an LLM’s context window, which sets the maximum number of tokens (words/subwords) for input and output combined, is crucial for maintaining answer quality and session coherence in real-world applications. As conversations or documents grow, older or less relevant context may be omitted (“context overflow”), causing loss of essential information and decreased response fidelity.
 
@@ -109,7 +101,6 @@
 
   <details>
     <summary>How would you evaluate the quality of responses of a LLM</summary>
-
     <p>
     Evaluating LLM-generated responses requires a holistic framework combining quantitative and qualitative methods. Quantitative metrics like BLEU, ROUGE, METEOR, and BERTScore gauge overlap or semantic similarity with reference answers, but these may not fully reflect response accuracy or context-appropriateness, especially for creative or open-ended outputs.
 
@@ -123,7 +114,6 @@
 
   <details>
     <summary>Agentic AI and related topics</summary>
-
     <p>
     Agentic AI refers to systems or agents driven by LLMs that autonomously plan, make decisions, and interact with APIs or dynamic environments to accomplish complex tasks. Unlike stateless chatbots, agentic AI incorporates memory, state management, and contextual reasoning to pursue goals across multiple steps. Core building blocks include planning (sequencing sub-tasks), tool use (calling APIs, databases, or web services), event-driven workflows, and stateful memory to track progress or recall prior actions.
 
@@ -137,7 +127,6 @@
 
   <details>
     <summary>How would you secure sensitive data like PII without sharing it with LLMs?</summary>
-
     <p>
     Securing sensitive data such as Personally Identifiable Information (PII) before LLM interaction involves a rigorous application of privacy engineering practices throughout the data pipeline. Start by applying Named Entity Recognition (NER) tools—like spaCy, Stanford NLP, or commercial APIs—to detect PII in text inputs. Once identified, use masking or redaction strategies to replace names, addresses, phone numbers, and other PII with generic tokens or pseudonyms before transmitting data to the LLM. For even stronger privacy, formal anonymization or pseudonymization frameworks (such as Microsoft’s Presidio) can ensure systematic consistency and compliance.
 
@@ -149,7 +138,6 @@
 
   <details>
     <summary>Anonymizers (Presidio)</summary>
-
     <p>
     Microsoft Presidio is a robust, open-source framework for detecting and anonymizing sensitive information, including PII, within natural language texts. Presidio leverages a combination of rule-based, pattern-based, and machine learning-powered Named Entity Recognition (NER) techniques to detect names, locations, organization references, dates, contact details, and more. It integrates configurable recognizers (detecting specific entity types), logic for risk scoring, and customizable anonymization actions like masking or token replacement.
 
@@ -161,7 +149,6 @@
 
   <details>
     <summary>Vector DBs</summary>
-
     <p>
     Vector databases are specialized data management systems for indexing, searching, and managing high-dimensional vector embeddings produced by AI models from unstructured input like text, images, or audio. Traditional databases excel with precise key-value or SQL queries, but struggle with semantic searches where the goal is to find “similar” rather than exact matches. Vector DBs store numerical arrays—output from models like BERT or CLIP—and allow queries via similarity measures (e.g., cosine, inner product, Euclidean distance).
 
@@ -173,7 +160,6 @@
 
   <details>
     <summary>Vector embeddings, searching using vectors and different chunking strategies</summary>
-
     <p>
     Vector embeddings transform complex data—like sentences or images—into dense numerical arrays that capture semantic meaning, enabling models to represent similarity in a geometric space. For example, “Paris” and “France’s capital” would have similar vector representations. When searching, a query input is embedded and compared to stored vectors in a database using metrics like cosine or Euclidean distance to surface the most semantically similar results.
 
