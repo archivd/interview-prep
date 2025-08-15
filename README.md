@@ -7,3 +7,4 @@ Index of files in this repo:
 2. [HLD - High Level Design](/resources/markdowns/HLD.md)
 3. [General Questions](/resources/markdowns/other_common_questions.md)
 4. [Frequently asked DSA Topics](/resources/markdowns/frequently_asked_DSA_topics.md)
+5. [GenAI related roles' Questions](/resources/markdowns/gen-ai_role_questions.md)
