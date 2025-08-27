@@ -10,3 +10,4 @@ Index of files in this repo:
 5. [GenAI related roles' Questions](/resources/markdowns/gen-ai_role_questions.md)
 6. [SQL Topics](/resources/markdowns/sql_faqs.md)
 7. [Data Types in Java](/resources/markdowns/data_types.md)
+8. [Ruby on Rails Topics](/resources/markdowns/ruby_on_rails.md)
