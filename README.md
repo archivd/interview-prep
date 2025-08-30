@@ -11,3 +11,4 @@ Index of files in this repo:
 6. [SQL Topics](/resources/markdowns/sql_faqs.md)
 7. [Data Types in Java](/resources/markdowns/data_types.md)
 8. [Ruby on Rails Topics](/resources/markdowns/ruby_on_rails.md)
+9. [Java resources](/resources/markdowns/java_resources.md)
