@@ -31,4 +31,12 @@
 
 <details>
   <summary>Tree</summary>
+
+  - [Tree Data Structure](https://www.geeksforgeeks.org/dsa/applications-of-tree-data-structure/)
+</details>
+
+<details>
+  <summary>Tree</summary>
+
+  - [Trie Data Structure](https://www.geeksforgeeks.org/dsa/trie-insert-and-search/)
 </details>
