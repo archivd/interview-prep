@@ -14,6 +14,24 @@
 </details>
 
 <details>
+  <summary>Tree</summary>
+
+  - [Tree Data Structure](https://www.geeksforgeeks.org/dsa/applications-of-tree-data-structure/)
+</details>
+
+<details>
+  <summary>Trie</summary>
+
+  - [Trie Data Structure](https://www.geeksforgeeks.org/dsa/trie-insert-and-search/)
+</details>
+
+<details>
+  <summary>Problems on Recursion</summary>
+
+  - [Ten exercises to master recursion](https://algocademy.com/blog/10-best-coding-exercises-for-mastering-recursion-from-beginner-to-advanced/)
+</details>
+
+<details>
   <summary>Dynamic Programming</summary>
 </details>
 
@@ -27,16 +45,4 @@
 
 <details>
   <summary>Graph</summary>
-</details>
-
-<details>
-  <summary>Tree</summary>
-
-  - [Tree Data Structure](https://www.geeksforgeeks.org/dsa/applications-of-tree-data-structure/)
-</details>
-
-<details>
-  <summary>Tree</summary>
-
-  - [Trie Data Structure](https://www.geeksforgeeks.org/dsa/trie-insert-and-search/)
 </details>
