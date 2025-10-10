@@ -34,7 +34,7 @@
     <summary><strong>A chatbot is showing gender bias, e.g., HR jobs to women and Engineering jobs to men. How do you detect and fix this?</strong></summary>
     <br>
     <p>
-    Detecting and remediating gender bias in chatbots requires a combination of systematic evaluation and targeted reengineering. Detection starts with input audits: prompt the bot with gender-neutral scenarios ("This person is a software engineer. What pronoun do you use?") and analyze if the bot exhibits stereotypes (e.g., “he” for engineers, “she” for HR roles). Metrics like WEAT (Word Embedding Association Test), bias ladders, and disparity scores quantify model bias across occupations, pronouns, and sentiment.
+    Detecting and remediating gender bias in chatbots requires a combination of systematic evaluation and targeted reengineering. Detection starts with input audits: prompt the bot with gender-neutral scenarios ("This person is a software engineer. What pronoun do you use?") and analyze if the bot exhibits stereotypes (e.g., "he" for engineers, "she" for HR roles). Metrics like WEAT (Word Embedding Association Test), bias ladders, and disparity scores quantify model bias across occupations, pronouns, and sentiment.
     </p>
     <p>
     Remediation involves both pre- and post-processing techniques. In training, implement counterfactual data augmentation—introduce examples where women are engineers and men are in HR—so biases are disassociated from gender. Use fairness-aware loss functions or adversarial training to penalize the model for biased associations. After deployment, apply output filtering—post-process responses and flag or rewrite those that contain gendered stereotypes. Ongoing audits with human-in-the-loop review catch subtler biases and unintended edge cases.
@@ -57,7 +57,7 @@
     LlamaIndex (formerly GPT Index) bridges LLMs with external data sources—documents, PDFs, APIs, SQL databases—by ingesting, indexing, and enabling semantic retrieval over heterogeneous corpora. Its key features include document chunking, embedding, indexing strategies, and retriever models that supply context to LLMs, making them expert-aware and less prone to hallucination.
     </p>
     <p>
-    Collectively, these frameworks empower developers to create end-to-end “AI pipelines” for tasks such as document Q&A, chatbots, contextual agents, and retrieval-augmented applications using standardized but flexible building blocks.
+    Collectively, these frameworks empower developers to create end-to-end "AI pipelines" for tasks such as document Q&A, chatbots, contextual agents, and retrieval-augmented applications using standardized but flexible building blocks.
     </p>
   </details>
 
@@ -96,7 +96,7 @@
     <summary><strong>Difference between fine-tuning, prompt-engineering and RAG</strong></summary>
     <br>
     <p>
-    Fine-tuning, prompt engineering, and RAG are key methods for adapting LLMs to specific needs, each with unique strengths and limitations. Fine-tuning retrains an LLM on domain or task-specific data, updating its weights so it “learns” new patterns. This achieves deep specialization and higher accuracy on narrow tasks, but requires significant data and compute, and risks overfitting or catastrophic forgetting.
+    Fine-tuning, prompt engineering, and RAG are key methods for adapting LLMs to specific needs, each with unique strengths and limitations. Fine-tuning retrains an LLM on domain or task-specific data, updating its weights so it "learns" new patterns. This achieves deep specialization and higher accuracy on narrow tasks, but requires significant data and compute, and risks overfitting or catastrophic forgetting.
     </p>
     <p>
     Prompt engineering doesn’t alter the model’s parameters; instead, it crafts the input prompt’s structure and wording to steer the model’s outputs. This is lightweight, cost-effective, and ideal for rapid experimentation or scenarios where weight modification isn’t possible, but relies on the LLM’s pre-existing knowledge and may lack reliability for complex tasks.
@@ -113,7 +113,7 @@
     <summary><strong>Context window management</strong></summary>
     <br>
     <p>
-    Managing an LLM’s context window, which sets the maximum number of tokens (words/subwords) for input and output combined, is crucial for maintaining answer quality and session coherence in real-world applications. As conversations or documents grow, older or less relevant context may be omitted (“context overflow”), causing loss of essential information and decreased response fidelity.
+    Managing an LLM’s context window, which sets the maximum number of tokens (words/subwords) for input and output combined, is crucial for maintaining answer quality and session coherence in real-world applications. As conversations or documents grow, older or less relevant context may be omitted ("context overflow"), causing loss of essential information and decreased response fidelity.
     </p>
     <p>
     Various strategies exist to optimize within these constraints. Prompt truncation cuts context from the oldest turns, but can miss important references. Dynamic context selection prioritizes recent, relevant, or salient data using heuristics or retrieval models. Chunking breaks long documents into manageable, semantically meaningful segments (overlapping windows help preserve continuity), and can feed only the most pertinent chunks. Summarization condenses previous context to free up tokens while retaining functional meaning.
@@ -150,7 +150,7 @@
     Agentic AI refers to systems or agents driven by LLMs that autonomously plan, make decisions, and interact with APIs or dynamic environments to accomplish complex tasks. Unlike stateless chatbots, agentic AI incorporates memory, state management, and contextual reasoning to pursue goals across multiple steps. Core building blocks include planning (sequencing sub-tasks), tool use (calling APIs, databases, or web services), event-driven workflows, and stateful memory to track progress or recall prior actions.
     </p>
     <p>
-    Frameworks like LangChain, LangGraph, CrewAI, and Semantic Kernel provide primitives for managing multi-agent systems, orchestrating interactions, failure recovery, and ensuring parallel or conditional executions. Agents can “delegate” subtasks to other agents or tools, process asynchronous events, and learn from user corrections.
+    Frameworks like LangChain, LangGraph, CrewAI, and Semantic Kernel provide primitives for managing multi-agent systems, orchestrating interactions, failure recovery, and ensuring parallel or conditional executions. Agents can "delegate" subtasks to other agents or tools, process asynchronous events, and learn from user corrections.
     </p>
     <p>
     Real-world applications are vast: personal AI assistants, workflow automation, multi-modal agents (text, image, audio), and integration with business logic or external controls. Crucial challenges involve ensuring agents stay aligned with user goals and safety policies, don’t invoke tools in unsafe contexts, and provide explainable decision paths.
@@ -192,7 +192,7 @@
     <summary><strong>Vector DBs</strong></summary>
     <br>
     <p>
-    Vector databases are specialized data management systems for indexing, searching, and managing high-dimensional vector embeddings produced by AI models from unstructured input like text, images, or audio. Traditional databases excel with precise key-value or SQL queries, but struggle with semantic searches where the goal is to find “similar” rather than exact matches. Vector DBs store numerical arrays—output from models like BERT or CLIP—and allow queries via similarity measures (e.g., cosine, inner product, Euclidean distance).
+    Vector databases are specialized data management systems for indexing, searching, and managing high-dimensional vector embeddings produced by AI models from unstructured input like text, images, or audio. Traditional databases excel with precise key-value or SQL queries, but struggle with semantic searches where the goal is to find "similar" rather than exact matches. Vector DBs store numerical arrays—output from models like BERT or CLIP—and allow queries via similarity measures (e.g., cosine, inner product, Euclidean distance).
     </p>
     <p>
     These systems adopt approximate nearest neighbor (ANN) algorithms (e.g., HNSW, FAISS, IVF) to provide extremely fast similarity searches even at large scale (millions or billions of vectors). Common platforms include Pinecone, Milvus, Weaviate, Qdrant, and Chroma, offering horizontal scaling, metadata filtering, hybrid search (combining vectors and metadata), and real-time updates.
@@ -206,7 +206,7 @@
     <summary><strong>Vector embeddings, searching using vectors and different chunking strategies</strong></summary>
     <br>
     <p>
-    Vector embeddings transform complex data—like sentences or images—into dense numerical arrays that capture semantic meaning, enabling models to represent similarity in a geometric space. For example, “Paris” and “France’s capital” would have similar vector representations. When searching, a query input is embedded and compared to stored vectors in a database using metrics like cosine or Euclidean distance to surface the most semantically similar results.
+    Vector embeddings transform complex data—like sentences or images—into dense numerical arrays that capture semantic meaning, enabling models to represent similarity in a geometric space. For example, "Paris" and "France’s capital" would have similar vector representations. When searching, a query input is embedded and compared to stored vectors in a database using metrics like cosine or Euclidean distance to surface the most semantically similar results.
     </p>
     <p>
     Chunking strategies determine how documents are divided before embedding and indexing. Fixed-size chunking slices text into blocks by word or character count, but may split meaningful phrases. Sentence-level or paragraph chunking preserves semantic units but can create uneven chunks. Recursive or overlap-based chunking, such as a sliding window approach, retains context across chunk boundaries, improving retrieval’s ability to capture multi-sentence relations. The chosen method directly affects semantic retrieval granularity, context recall, and performance.

@@ -339,7 +339,7 @@ You can then chain them like:
 `Article.published.recent`  
 
 **Benefits:**  
-- Keep query logic within models, adhering to Rails’ “skinny controller, fat model” principle.  
+- Keep query logic within models, adhering to Rails’ "skinny controller, fat model" principle.  
 - Enhance code readability by replacing raw queries in controllers.  
 - Safe to compose with one another due to returning relations.  
 
@@ -395,7 +395,7 @@ Some key callbacks include:
 - **before_destroy / after_destroy** – useful for cleaning related data.  
 - **after_commit / after_rollback** – transactional callbacks that run after DB transactions succeed or fail.  
 
-**Best practice:** Don’t overload callbacks with heavy business logic; otherwise, models can become “fat” and hard to debug. Complex workflows should go in service objects, but lightweight tasks (setting a default, cleaning up data, or logging) are fine to keep in callbacks.  
+**Best practice:** Don’t overload callbacks with heavy business logic; otherwise, models can become "fat" and hard to debug. Complex workflows should go in service objects, but lightweight tasks (setting a default, cleaning up data, or logging) are fine to keep in callbacks.  
 </details>
 <!-- ------------------- END Q6 ------------------- -->
 
@@ -455,7 +455,7 @@ For example, consider a `users` table with `Admin < User` and `Customer < User`.
 - Makes querying easy since all records live in a single table.  
 
 **Disadvantages:**  
-- Large tables can get “bloated” with irrelevant columns that apply to only some subclasses.  
+- Large tables can get "bloated" with irrelevant columns that apply to only some subclasses.  
 - Subclass-specific validations and defaults may feel awkward to implement.  
 - Schema changes can negatively affect unrelated subclasses.  
 - The `type` column is Rails magic and can break if not maintained properly.  
@@ -480,7 +480,7 @@ You generate migrations with `rails generate migration AddAgeToUsers age:integer
 - Provide DB-agnostic syntax, keeping your code portable.  
 - Allow safe rollbacks when a deploy introduces unintended changes.  
 
-Migrations encourage disciplined schema evolution, making them central to Rails’ philosophy of “convention over configuration” and agile database design.  
+Migrations encourage disciplined schema evolution, making them central to Rails’ philosophy of "convention over configuration" and agile database design.  
 </details>
 <!-- ------------------- END Q9 ------------------- -->
 
@@ -896,7 +896,7 @@ Then in a view file:
 - Encourage code reuse.  
 - Improve separation of concerns.  
 
-**Advanced:** Rails also offers `ApplicationHelper` as a global helper for all views. For larger applications, splitting helpers into modules or replacing them with service objects or “view components” can keep things more organized.  
+**Advanced:** Rails also offers `ApplicationHelper` as a global helper for all views. For larger applications, splitting helpers into modules or replacing them with service objects or "view components" can keep things more organized.  
 </details>
 <!-- ------------------- END Q24 ------------------- -->
 
@@ -1738,7 +1738,7 @@ This makes `destroy` safer but slower.
 - ActiveRecord for actual database models.  
 - ActiveModel for POROs (Plain Old Ruby Objects) like form objects, API response objects, service data.  
 
-This separation allows Rails to extend “model-like” behavior beyond ActiveRecord.  
+This separation allows Rails to extend "model-like" behavior beyond ActiveRecord.  
 </details>
 <!-- ------------------- END Q56 ------------------- -->
 
@@ -1882,7 +1882,7 @@ Symbols save memory and are faster when consistency matters, but lack the full s
   <summary>Q62. What do you mean by schema versioning in Rails? When does it change?</summary>
 
 ----
-In Rails, **schema versioning** is the practice of managing the state of the database schema over time through migrations. Each migration file contains a timestamp in its filename, which serves as its “version.”  
+In Rails, **schema versioning** is the practice of managing the state of the database schema over time through migrations. Each migration file contains a timestamp in its filename, which serves as its "version."  
 
 For example: `20250827120000_add_users_table.rb`.  
 
@@ -2017,7 +2017,7 @@ Generates nested routes only for creation (`/posts/:post_id/comments`) but expos
 
 **Benefits:**  
 - Cleaner, shorter URLs.  
-- Easier maintenance and avoids “max nesting” rule (Rails recommends no more than 1 level of nesting).  
+- Easier maintenance and avoids "max nesting" rule (Rails recommends no more than 1 level of nesting).  
 
 **When to use:** Always prefer shallow nesting when child resources are meaningful independently (like comments, likes).  
 </details>
@@ -2425,7 +2425,7 @@ They are crucial for setting up application-wide settings uniformly across envir
 ----
 - **Gem**: A packaged library of Ruby code. It can provide functionalities usable in any Ruby/Rails project. Gems don’t necessarily follow Rails structure and usually extend the language or add utilities. Example: `devise`, `nokogiri`.  
 
-- **Rails Engine**: A mini Rails application that can plug into another Rails app. It has its own `app/`, `config/`, routes, controllers, views, models, and initializers. An engine is essentially a “gem with Rails inside it.” Example: `Devise` itself is implemented as an engine.  
+- **Rails Engine**: A mini Rails application that can plug into another Rails app. It has its own `app/`, `config/`, routes, controllers, views, models, and initializers. An engine is essentially a "gem with Rails inside it." Example: `Devise` itself is implemented as an engine.  
 
 **Difference:**  
 - A gem is general-purpose Ruby; an engine specifically extends Rails functionality.  
@@ -2516,7 +2516,7 @@ Always prefer explicit foreign keys in migrations for better data reliability.
 ----
 This depends on personal experience. For a mid-senior engineer, expected answer:  
 
-“I’ve worked with Rails 5, 6, and 7.”  
+"I’ve worked with Rails 5, 6, and 7."  
 
 **Major changes between them:**  
 - **Rails 5** introduced ActionCable, API-only mode, Attributes API.  
@@ -2751,7 +2751,7 @@ However, for maintainability and proper formatting, templates are preferred in m
   <summary>Q96. What do you mean by upsert?</summary>
 
 ----
-**Upsert** stands for “update or insert.” It’s a database operation that either inserts a new row if it doesn’t exist, or updates it if it does.  
+**Upsert** stands for "update or insert." It’s a database operation that either inserts a new row if it doesn’t exist, or updates it if it does.  
 
 Rails supports this with methods like `insert_all` and `upsert_all`.  
 
@@ -3038,7 +3038,7 @@ In production systems, Sidekiq is almost a standard choice when background proce
   - Reliable fetch (ensures no job loss even during crashes).  
   - Batch jobs (group jobs with callbacks).  
   - Rate limiting.  
-  - More queue features like “pause queues.”  
+  - More queue features like "pause queues."  
 - **Sidekiq Enterprise:** Adds even more features like rolling restarts, leader election, security tools.  
 
 **Summary:** Use free Sidekiq for simple apps. Use Pro/Enterprise for enterprises requiring advanced scaling, reliability, and monitoring.  
